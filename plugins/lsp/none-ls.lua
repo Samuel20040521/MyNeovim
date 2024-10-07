@@ -20,6 +20,8 @@ return {
         "pylint",   -- python linter
         "eslint_d", -- js linter
         "clang-format",
+        "shellcheck",
+        "shfmt",
       },
     })
 
@@ -50,6 +52,8 @@ return {
         diagnostics.pylint,
         diagnostics.ruff,
         diagnostics.mypy,
+        -- for bash
+        diagnostics.shellcheck.with({ filetypes = { "sh", "zsh" } }),
         diagnostics.eslint_d.with({                                         -- js/ts linter
           condition = function(utils)
             return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs

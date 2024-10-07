@@ -10,6 +10,7 @@ return {
         c_cpp = { "clang-format" },
         c = { "clang-format" },
         cpp = { "clang-format" },
+        bash = { "shellcheck" },
       },
       format_on_save = {
         lsp_fallback = true,
