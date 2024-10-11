@@ -75,19 +75,19 @@ return {
           local opts = { buffer = ev.buf, silent = true }
           -- set keybinds
           opts.desc = "show lsp references"
-          keymap.set("n", "gr", "<cmd>telescope lsp_references<cr>", opts) -- show definition, references
+          keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", opts) -- show definition, references
 
           opts.desc = "go to declaration"
           keymap.set("n", "gd", vim.lsp.buf.declaration, opts) -- go to declaration
 
           opts.desc = "show lsp definitions"
-          keymap.set("n", "gd", "<cmd>telescope lsp_definitions<cr>", opts) -- show lsp definitions
+          keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<cr>", opts) -- show lsp definitions
 
           opts.desc = "show lsp implementations"
-          keymap.set("n", "gi", "<cmd>telescope lsp_implementations<cr>", opts) -- show lsp implementations
+          keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<cr>", opts) -- show lsp implementations
 
           opts.desc = "show lsp type definitions"
-          keymap.set("n", "gt", "<cmd>telescope lsp_type_definitions<cr>", opts) -- show lsp type definitions
+          keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<cr>", opts) -- show lsp type definitions
 
           opts.desc = "see available code actions"
           keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection

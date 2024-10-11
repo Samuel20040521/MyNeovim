@@ -9,10 +9,10 @@ return {
       "folke/todo-comments.nvim",
       'jmbuhr/telescope-zotero.nvim',
       -- dependencies = {
-        -- { 'kkharji/sqlite.lua' },
+      -- { 'kkharji/sqlite.lua' },
       -- },
 
-      'kkharji/sqlite.lua' ,
+      'kkharji/sqlite.lua',
     },
     config = function()
       local telescope = require("telescope")
@@ -24,7 +24,7 @@ return {
           mappings = {
             i = {
               ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-              ["<C-j>"] = actions.move_selection_next, -- move to next result
+              ["<C-j>"] = actions.move_selection_next,     -- move to next result
               ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
             },
           },
@@ -32,7 +32,7 @@ return {
       })
 
       telescope.load_extension("fzf")
-      telescope.load_extension 'zotero'
+      telescope.load_extension("zotero")
 
       -- set keymaps
       local keymap = vim.keymap -- for conciseness
