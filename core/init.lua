@@ -1,2 +1,2 @@
-require("Samuel.core.options")
-require("Samuel.core.keymaps")
+require("Polarbear.core.options")
+require("Polarbear.core.keymaps")

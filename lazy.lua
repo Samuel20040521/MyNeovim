@@ -12,8 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  { import = "Samuel.plugins" },
-  { import = "Samuel.plugins.lsp" }
+  { import = "Polarbear.plugins" },
+  { import = "Polarbear.plugins.lsp" }
 },{
   checker = {
     enabled = true,
